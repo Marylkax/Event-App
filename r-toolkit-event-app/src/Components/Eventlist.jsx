@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import backdrop from "./images/backdrop.png";
 const Eventlist = (props) => {
   const { item } = props;
+
+  const [liked, setLiked] = useState(true);
 
   // console.log(props);
   // console.log(item.images[0].url);
@@ -13,7 +15,15 @@ const Eventlist = (props) => {
         <div className="eventdetails">
           <p>{item.name}</p>
           <p>{dateend.toLocaleString()}</p>
+          <button
+            style={{ color: liked ? "grey" : "pink" }}
+            onClick={() => setLiked(!liked)}
+          >
+            &#10084;
+          </button>
+          {/* Turn liked into favourites page/list, to show list of favourites */}
         </div>
+
         {/* <img src={item.images[0].url} /> */}
         {/* {item.images[0].url === true && <img src={item.images[0].url} />} */}
         <div className="eventimage">

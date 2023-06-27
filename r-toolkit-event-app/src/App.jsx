@@ -13,7 +13,7 @@ import Listings from "./Listings";
 function App() {
   return (
     <>
-      <nav>
+      <nav className="pagenav">
         <ul>
           <li>
             <Link to="/">Homepage</Link>

@@ -21,6 +21,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.pagenav ul {
+  list-style: none;
+  text-decoration: none;
+}
 .navbarcontainer ul li {
   list-style: none;
   text-decoration: none;
