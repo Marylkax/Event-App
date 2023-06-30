@@ -5,8 +5,7 @@ const Eventlist = (props) => {
 
   const [liked, setLiked] = useState(true);
 
-  // console.log(props);
-  // console.log(item.images[0].url);
+  
   let dateend = item.schedules[0].end_ts;
   //how to show dates in right format?
   return (
