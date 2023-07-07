@@ -21,14 +21,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-.pagenav ul {
-  list-style: none;
-  text-decoration: none;
-}
+
 .navbarcontainer ul li {
   list-style: none;
   text-decoration: none;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to right,
       rgba(100, 200, 200, 1),
       rgba(100, 200, 200, 1)
@@ -42,11 +39,7 @@
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 400ms;
-}
-
-.navbarcontainer ul li:hover {
-  background-size: 0 3px, 100% 3px;
+  transition: background-size 400ms; */
 }
 
 .navbarcontainer {
@@ -58,6 +51,15 @@
   justify-content: space-between;
   padding: 20px;
   gap: 10px;
+  text-decoration: none;
+}
+.activitysearchbuttons button {
+  color: aliceblue;
+}
+.activitysearchbuttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 .eventclip {
   width: 200px;
@@ -73,7 +75,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #e8e8ef;
   text-decoration: inherit;
 }
 a:hover {
