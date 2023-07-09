@@ -26,7 +26,6 @@ function Listings() {
 
   const getEventData = async () => {
     try {
-      const apiKey = ;
       const headers = { Authorization: `Bearer ${apiKey}` };
       const dataThistleAPI = `https://api.datathistle.com/v1/events?location=${search}&search?query=${activitytag}`;
       //need to set a default location
@@ -72,7 +71,7 @@ function Listings() {
   //   setLiked(e.target.value);
   // }
 
-  if (!events) return <p>Loading.</p>;
+  if (!events) return <p>Loading...</p>;
 
   // let eventlisting = [...events];
   // console.log(eventlisting);
@@ -86,6 +85,7 @@ function Listings() {
   return (
     <>
       <input
+        className="locationSearch"
         placeholder="Please enter location"
         type="text"
         onInput={onSearchInput}
@@ -96,8 +96,9 @@ function Listings() {
         <button value="music">Music</button>
         <button value="nature">Nature</button>
       </div>
-
-      <Eventdatalist eventlisting={events} />
+      <div className="eventlistcontainer">
+        <Eventdatalist eventlisting={events} />
+      </div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-
+import title from "./Components/images/Plugged_in.png";
 import axios from "axios";
 
 import Eventlist from "./Components/Eventlist";
@@ -15,9 +15,8 @@ import EventDetails from "./Components/EventDetails";
 function App() {
   return (
     <>
-      {" "}
       <div className="navbarcontainer">
-        <h1>EVENTS</h1>
+        <header className="headertitle">{/* <img src={title} /> */}</header>
         <nav className="navbarlinks">
           <ul>
             <li>
@@ -41,6 +40,7 @@ function App() {
           </ul>
         </nav>
       </div>
+
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>
@@ -52,6 +52,7 @@ function App() {
           element={<EventDetails />}
         ></Route>
       </Routes>
+      <footer className="footercontainer">Copyright 2023 Plugged in</footer>
     </>
   );
 }
