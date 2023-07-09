@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   location: "London2",
-
+  liked: [],
   detailsID: "",
   //  liked: "true"
 };
@@ -19,7 +19,22 @@ export const eventSlice = createSlice({
       state.search = action.payload;
     },
     setLiked: (state, action) => {
-      state.liked = action.payload;
+      const indexOf = state.liked.indexOf(action.payload);
+
+      if (indexOf === -1) {
+        const result = {
+          ...state,
+          liked: [...state.liked, action.payload],
+        };
+
+        return result;
+      }
+
+      const liked = [...state.liked];
+      liked.splice(indexOf, 1);
+      const result = { ...state, liked };
+
+      return result;
     },
     setActivityTag: (state, action) => {
       state.activitytag = action.payload;

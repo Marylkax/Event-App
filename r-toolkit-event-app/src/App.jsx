@@ -11,10 +11,14 @@ import Listings from "./Listings";
 import About from "./About";
 import Favourites from "./Favourites";
 import EventDetails from "./Components/EventDetails";
+import titleplug from "./Components/images/title.png";
 
 function App() {
   return (
     <>
+      <header>
+        <img src={titleplug} />
+      </header>
       <div className="navbarcontainer">
         <header className="headertitle">{/* <img src={title} /> */}</header>
         <nav className="navbarlinks">

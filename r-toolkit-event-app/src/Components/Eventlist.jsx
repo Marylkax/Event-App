@@ -8,18 +8,17 @@ import Eventdetails from "./EventDetails";
 const Eventlist = (props) => {
   const { item } = props;
   const navigate = useNavigate();
-  const [liked, setLiked] = useState(true);
+  // const [liked, setLiked] = useState(true);
   // const [screenMode, setScreenMode] = useState(0);
-  // const liked = useSelector(selectLiked);
+  const liked = useSelector(selectLiked);
   const dispatch = useDispatch();
 
   let dateend = item.schedules[0].end_ts;
   let datetoconvert = new Date(dateend);
-  console.log(dateend);
-  //how to show dates in right format?
-  // const onnavClick = (e) => {
-  //   e.preventDefault();
-  //   setScreenMode({ screenMode: Number(e.target.id) });
+  // console.log(dateend);
+
+  // const onLikeButton = (id) => {
+  //   dispatch({type: setLiked, payload: liked}));
   // };
   return (
     <>
@@ -28,17 +27,19 @@ const Eventlist = (props) => {
           <p>{item.name}</p>
           <p>{datetoconvert.toLocaleDateString("en-GB")}</p>
           {/* <p>{item.event_id}</p> */}
-          <div
+          <button
             className="likeButton"
-            style={{ color: liked ? "white" : "red " }}
-            onClick={() => setLiked(!liked)}
-
+            // style={{ color: liked ? "white" : "red " }}
+            onClick={(e) => {
+              dispatch(setLiked(e.target.id));
+            }}
+            id={item.event_id}
             // onClick={onLikeButton}
             // // onClick={()=>dispatch(liked(item.name))}
             // onClick={()=> onLikeToggle(item.events_id)}
           >
             &#10084;
-          </div>
+          </button>
 
           <p
             onClick={(e) => {

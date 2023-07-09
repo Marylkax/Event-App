@@ -32,7 +32,7 @@ function Listings() {
       console.log(dataThistleAPI);
       const { data } = await axios.get(dataThistleAPI, { headers });
       dispatch(setEvents(data));
-      // console.log(data);
+      console.log(events[0].event_id);
     } catch (error) {
       console.log(error);
     }
