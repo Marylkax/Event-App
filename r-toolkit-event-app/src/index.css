@@ -16,7 +16,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #f7c8e0;
+  background-color: #fbfbfb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,37 +25,22 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.headertitle img {
+.headerTitle img {
   width: 50%;
 }
 
-.navbarcontainer ul li {
+.navbarContainer ul li {
   list-style: none;
   text-decoration: none;
-  /* background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 1)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-    );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms; */
 }
 
-.navbarcontainer {
+.navbarContainer {
   border-bottom: solid 1px white;
   border-top: solid 1px white;
   display: grid;
   margin-bottom: 10px;
 }
-.navbarlinks {
+.navbarLinks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 10px;
@@ -64,12 +49,12 @@
   background-color: #efa3c8;
 }
 
-.activitysearchbuttons button {
+.activitySearchButtons button {
   color: rgb(254, 254, 254);
   background-color: #efa3c8;
   border: 1px solid rgb(236, 236, 236);
 }
-.activitysearchbuttons {
+.activitySearchButtons {
   /* display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   display: flex;
@@ -78,14 +63,14 @@
   /* margin-left: 100x;
   margin-right: 100px; */
 }
-.eventimage img {
+.eventImage img {
   width: 200px;
   padding-left: 10px;
   padding-right: 10px;
   /* border-radius: 15% 15% 0% 0%; */
 }
 
-.eventinfocard {
+.eventInfocard {
   /* border-bottom: 3px solid rgba(0, 0, 0, 0.87); */
   margin-bottom: 10px;
   /* margin-left: 20px;
@@ -98,23 +83,17 @@
 
   /* background-color: #f4b1d9; */
 }
-.eventlistcontainer {
+.eventListContainer {
   display: grid;
   justify-content: center;
   align-items: center;
 }
-.eventlistcontainer > div:nth-of-type(odd) {
+.eventListContainer > div:nth-of-type(odd) {
   background: #b4e4ff;
 }
-.eventlistcontainer > div:nth-of-type(even) {
+.eventListContainer > div:nth-of-type(even) {
   background: #95bdff;
 }
-
-/* .eventdetails {
-  flex: 1;
-  padding-right: 10px;
- 
-} */
 
 a {
   font-weight: 500;
@@ -159,6 +138,6 @@ button:hover {
   border-color: rgba(212, 166, 244, 0.87);
 }
 
-.cardcontainer img {
+.cardContainer img {
   width: 50%;
 }

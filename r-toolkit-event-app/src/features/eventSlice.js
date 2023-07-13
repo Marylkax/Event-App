@@ -37,7 +37,7 @@ export const eventSlice = createSlice({
       return result;
     },
     setActivityTag: (state, action) => {
-      state.activitytag = action.payload;
+      state.activityTag = action.payload;
     },
     setDetailsId: (state, action) => {
       state.detailsID = action.payload;
@@ -51,6 +51,6 @@ export const { setEvents, setSearch, setLiked, setActivityTag, setDetailsId } =
 export const selectEvents = (state) => state.event.events;
 export const selectSearch = (state) => state.event.search;
 export const selectLiked = (state) => state.event.liked;
-export const selectActivityTag = (state) => state.event.activitytag;
+export const selectActivityTag = (state) => state.event.activityTag;
 export const selectDetailsID = (state) => state.event.detailsID;
 export default eventSlice.reducer;

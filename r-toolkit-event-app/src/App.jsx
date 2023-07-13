@@ -4,7 +4,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import title from "./Components/images/Plugged_in.png";
 import axios from "axios";
 
-import Eventlist from "./Components/Eventlist";
+import EventItem from "./Components/EventItem";
 import Searchbar from "./Components/Searchbar";
 import Home from "./Home";
 import Listings from "./Listings";
@@ -19,9 +19,9 @@ function App() {
       <header>
         <img src={titleplug} />
       </header>
-      <div className="navbarcontainer">
-        <header className="headertitle">{/* <img src={title} /> */}</header>
-        <nav className="navbarlinks">
+      <div className="navbarContainer">
+        <header className="headerTitle">{/* <img src={title} /> */}</header>
+        <nav className="navbarLinks">
           <ul>
             <li>
               <Link to="/">Homepage</Link>
@@ -53,10 +53,9 @@ function App() {
         <Route
           exact
           path="/eventDetails/:eventId"
-          element={<EventDetails />}
-        ></Route>
+          element={<EventDetails />}></Route>
       </Routes>
-      <footer className="footercontainer">Copyright 2023 Plugged in</footer>
+      <footer className="footerContainer">Copyright 2023 Plugged in</footer>
     </>
   );
 }

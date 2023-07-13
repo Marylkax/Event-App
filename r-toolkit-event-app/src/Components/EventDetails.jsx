@@ -12,14 +12,10 @@ function EventDetails() {
   const event = events.find((event) => {
     return event.event_id === detailsID;
   });
-  console.log(eventId, events, event);
-  console.log(event.tags[0]);
-  console.log(event.images[0]);
-  console.log(event.website);
 
   return (
     <>
-      <div className="cardcontainer">
+      <div className="cardContainer">
         <h1>{event.name}</h1>
 
         {event.images[0].url && event.images[0] ? (
@@ -27,7 +23,6 @@ function EventDetails() {
         ) : (
           <img src={backdrop} />
         )}
-        {/* <img src={event.images[0].url} /> */}
         <p>{event.descriptions[0].description}</p>
         <p>{event.website}</p>
       </div>
